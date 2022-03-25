@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Test page</title>
+</head>
+<body>
+
+	<button id="vote">Vote</button>
+
+	<script>
+		
+		document.getElementById('vote').addEventListener('click', function() {
+			let url = 'https://acidic-colossal-ethernet.glitch.me/vote?image=';
+			url += 1;
+			url += '&result=';
+			result = 0;
+
+			fetch(url, {
+			    method: 'GET',
+			    mode: 'cors',
+			    cache: 'no-cache',
+			    redirect: 'follow',
+			});
+
+			console.log('I voted');
+		});
+
+	</script>
+
+</body>
+</html>
